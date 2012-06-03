@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'EntypoRegular';
+    src: url('entypo/entypo-webfont.eot');
+    src: url('entypo/entypo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('entypo/entypo-webfont.woff') format('woff'),
+         url('entypo/entypo-webfont.ttf') format('truetype'),
+         url('entypo/entypo-webfont.svg#EntypoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* =============================================================================
+   HTML5 Boilerplate CSS: h5bp.com/css
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+body { margin: 0; font-size: 1em; line-height: 1.4; }
+ol, ul, li {list-style: none; }
+
+
+/* =============================================================================
+   Petter
+   ========================================================================== */
+
+body {
+  height: 70%;
+  width: 70%;
+  text-align: center;
+  background: white;
+  opacity: 0;
+  overflow: hidden;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+#quote-container {
+  position: absolute;
+  top: 50%;
+  margin:-25% auto;
+  width: 100%;
+  background: #fff;
+  z-index: 10;
+}
+
+
+#quote-container h1 {
+
+  margin: 0 5%;
+  line-height: 1em;
+
+}
+
+#quote-container h5 {
+  color: #666;
+}
+
+#share-container {
+  position: absolute;
+  bottom: 10%;
+  left: 45%;
+}
+
+a.share {
+  color: #ddd;
+  font-size: 48px;
+  font-family: 'EntypoRegular';
+  text-shadow:  0 0 1px #ccc;
+}
+
+a.share:hover {
+  color: #bbb;
+}
+
+#share-dialog {
+  padding: 0;
+  text-align: left;
+  font-weight: bold;
+  line-height: 1.4;
+  font-size: 14px;
+  background: #fff;
+  box-shadow: 0px 0px 14px #ccc;
+  height: 80px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+#share-dialog ul {
+  
+  color: #aaa;
+  padding: 5px;
+}
+
+#footer-container {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+}
+
+::-moz-selection{ color:#ff005f; text-shadow: none; }
+::selection { color:#ff005f; text-shadow: none; }
