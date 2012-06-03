@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'EntypoRegular';
-    src: url('entypo/entypo-webfont.eot');
-    src: url('entypo/entypo-webfont.eot?#iefix') format('embedded-opentype'),
-         url('entypo/entypo-webfont.woff') format('woff'),
-         url('entypo/entypo-webfont.ttf') format('truetype'),
-         url('entypo/entypo-webfont.svg#EntypoRegular') format('svg');
+    src: url('../fonts/entypo/entypo-webfont.eot');
+    src: url('../fonts/entypo/entypo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/entypo/entypo-webfont.woff') format('woff'),
+         url('../fonts/entypo/entypo-webfont.ttf') format('truetype'),
+         url('../fonts/entypo/entypo-webfont.svg#EntypoRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -19,17 +19,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
-body { margin: 0; font-size: 1em; line-height: 1.4; }
-ol, ul, li {list-style: none; }
+body { margin: 0; font-size: 1em; line-height: 1.4; -webkit-text-size-adjust:none; }
+ol, ul, li {list-style: none; margin: 0; padding: 0; }
 
 
 /* =============================================================================
    Petter
    ========================================================================== */
 
+
+
 body {
-  height: 70%;
-  width: 70%;
+  height: 100%;
+  width: 100%;
   text-align: center;
   background: white;
   opacity: 0;
@@ -41,7 +43,7 @@ a {
   text-decoration: none;
 }
 
-#quote-container {
+#slide {
   position: absolute;
   top: 50%;
   margin:-25% auto;
@@ -51,14 +53,13 @@ a {
 }
 
 
-#quote-container h1 {
-
+#slide ul li h1 {
   margin: 0 5%;
   line-height: 1em;
 
 }
 
-#quote-container h5 {
+#slide ul li h5 {
   color: #666;
 }
 
@@ -103,6 +104,17 @@ a.share:hover {
   margin: 0 auto;
   position: absolute;
   bottom: 0;
+}
+
+.swipe {
+  height: 100%;
+  padding-bottom:0px;
+}
+.swipe li div, .swipe div div div {
+  margin:0 0px;
+  padding:0px 1%;
+  font-weight:bold;
+  text-align:center;
 }
 
 ::-moz-selection{ color:#ff005f; text-shadow: none; }
