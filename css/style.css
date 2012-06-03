@@ -44,12 +44,7 @@ a {
 }
 
 #slide {
-  position: absolute;
-  top: 50%;
-  margin:-25% auto;
-  width: 100%;
-  background: #fff;
-  z-index: 10;
+
 }
 
 
@@ -107,11 +102,16 @@ a.share:hover {
 }
 
 .swipe {
-  height: 100%;
+  position: absolute;
+  top: 45%;
+  margin: -25% auto;
+  width: 100%;
+  background: #fff;
+  z-index: 10;
   padding-bottom:0px;
 }
 .swipe li div, .swipe div div div {
-  margin:0 0px;
+  margin:0 2%;
   padding:0px 1%;
   font-weight:bold;
   text-align:center;
