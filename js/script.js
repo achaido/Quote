@@ -1,6 +1,5 @@
 window.onload = function() {
-  
-  
+
 
   // get quote container
   var quote = document.getElementById("slider");
@@ -47,7 +46,7 @@ window.onload = function() {
         new Swipe(document.getElementById('slider'));
         $("body").animate({ opacity: "1"}, 1000);
         $("#slider ul li h1").fitText(1.2);
-        $("#slider ul li h5").fitText(3.4);
+        $("#slider ul li h5").fitText(2.8);
         $("#slider ul li h1").css("line-height", "1em");
         
       }

@@ -102,6 +102,7 @@ a.share:hover {
 }
 
 .swipe {
+  
   position: absolute;
   top: 45%;
   margin: -25% auto;
