@@ -117,5 +117,11 @@ a.share:hover {
   text-align:center;
 }
 
+.move {
+  position: absolute;
+  border: 1px solid black;
+  -webkit-transform: translate3d(1000px, 0px, 0px);
+}
+
 ::-moz-selection{ color:#ff005f; text-shadow: none; }
 ::selection { color:#ff005f; text-shadow: none; }

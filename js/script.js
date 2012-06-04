@@ -1,7 +1,6 @@
-
 window.onload = function() {
   
-
+  
 
   // get quote container
   var quote = document.getElementById("slider");
@@ -54,33 +53,42 @@ window.onload = function() {
       }
       injectJson(); 
 
-
+      // needs to be changed with the slide effect
       changeTitle = function(post){
-        document.title = post.text;
+       // document.title = post.text;
       }
-      changeTitle(post);
+//      changeTitle(post);
       
       // Keyboard shortcuts
       $('body').bind('keydown', 'space', function(e){
         e.preventDefault();
-            console.log('space');
-            $("#slider h1").fadeOut(200, function(){
-              injectJson();
-            });
+        console.log('space');
+        newPos = newPos + $(window).width();  
+        $("#slider ul").css('-webkit-transform', 'translate3d(-'+ newPos +'px, 0px, 0px)');
+        $("#slider ul").css('-webkit-transition', '1000ms');
+        console.log(newPos);
         });
       
+      var newPos = 0;
       $('body').bind('keydown', 'left', function(e){
         e.preventDefault();
-            console.log('left');
-            $("#slide").animate({ left: "100%"}, 300);
-        });
+        console.log('left');
+        newPos = newPos - $(window).width();
+        $("#slider ul").css('-webkit-transform', 'translate3d(-'+ newPos +'px, 0px, 0px)');
+        console.log(newPos);
+      });
+      
       
       $('body').bind('keydown', 'right', function(e){
         e.preventDefault();
-            console.log('right');
-            $("#slide").animate({ right: "100%"}, 300);
-        });
-      
+        console.log('right');
+        newPos = newPos + $(window).width();  
+        $("#slider ul").css('-webkit-transform', 'translate3d(-'+ newPos +'px, 0px, 0px)');
+        $("#slider ul").css('-webkit-transition', '1000ms');
+        console.log(newPos);
+                        
+      });
+    
   }
   
  
