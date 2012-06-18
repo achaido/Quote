@@ -11,6 +11,7 @@
 }
 
 
+
 /* =============================================================================
    HTML5 Boilerplate CSS: h5bp.com/css
    ========================================================================== */
@@ -28,14 +29,15 @@ ol, ul, li {list-style: none; margin: 0; padding: 0; }
    ========================================================================== */
 
 
-
 body {
+
   height: 100%;
   width: 100%;
   text-align: center;
   background: white;
   opacity: 0;
   overflow: hidden;
+  text-transform: uppercase;
 }
 
 a {
@@ -43,15 +45,16 @@ a {
   text-decoration: none;
 }
 
-#slide {
+#main-container {
+}
 
+#slide {
 }
 
 
 #slide ul li h1 {
   margin: 0 5%;
   line-height: 1em;
-
 }
 
 #slide ul li h5 {
@@ -89,23 +92,46 @@ a.share:hover {
 }
 
 #share-dialog ul {
-  
   color: #aaa;
   padding: 5px;
 }
 
-#footer-container {
+#footer-container  {
+  font-size: 11px;
+  color: #888;
   width: 100%;
   margin: 0 auto;
   position: absolute;
   bottom: 0;
+  z-index: 0;
+  text-transform: lowercase;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0.0)), to(#FFFFFF), color-stop(.25,#FFFFFF));
+  background: -moz-linear-gradient(0% 75% 90deg,#FFFFFF, #FFFFFF, rgba(255,255,255,0.0) 100%);
+}
+
+#footer-container a {
+  color: #888;
+}
+
+#footer-container a:hover {
+  color: #0073ff;
+}
+
+#hotkeys {
+  margin-top: 15px;
+  font-size: 11px;
+  text-transform: lowercase;
+  color: #888;
+}
+
+#hotkeys span {
+  margin: 0 7px;
 }
 
 .swipe {
-  
   position: absolute;
-  top: 45%;
-  margin: -25% auto;
+  top: 0px;
+  margin: 20% auto;
   width: 100%;
   background: #fff;
   z-index: 10;
@@ -124,5 +150,13 @@ a.share:hover {
   -webkit-transform: translate3d(1000px, 0px, 0px);
 }
 
-::-moz-selection{ color:#ff005f; text-shadow: none; }
-::selection { color:#ff005f; text-shadow: none; }
+@media (max-width: 680px){
+  #hotkeys {
+    display: none;
+  }
+}
+
+
+
+::-moz-selection{ color: #222; background-color:#fff1c5; text-shadow: none; }
+:focus, ::selection { color: #222; background-color:#fff1c5; text-shadow: none; outline: none}

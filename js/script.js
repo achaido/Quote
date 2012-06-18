@@ -24,12 +24,15 @@ window.onload = function() {
 
       // get all posts
        var posts = data.response.posts
+       
+       console.log(posts.length);
+       posts.sort (function() { return Math.random() - .5 });
 
       injectJson = function(){
         for (i = 0; i < posts.length; i++){
           
           // get a random post (generate here to make it random)
-          var post = data.response.posts[Math.floor(Math.random() * posts.length)]
+          var post = data.response.posts[i]
           
           if(i === 1){
             $('#slider ul li').css("display", "block");   
@@ -37,9 +40,7 @@ window.onload = function() {
              $('#slider ul li').css("display", "none"); 
           }
 
-          $('#slider ul').append('<li><div><h1>&#8220;' + post.text + '&#8221;</h1>' + '<h5>-' + post.source + '</h5></div></li>');
-          
-          
+          $('#slider ul').append('<li><div><a href=""><h1>&#8220;' + post.text + '&#8221;</h1>' + '<h5>-' + post.source + '</h5></a></div><a class="share" href="https://twitter.com/intent/tweet?text=&#8220;' + post.text + '&#8220; -' + post.source +'&hashtags=quote&related=achaido&url=http%3A%2F%2Fachaido.com">/</a></li>');
 
         }    
         // When done the loop do this:
@@ -48,6 +49,7 @@ window.onload = function() {
         $("#slider ul li h1").fitText(1.2);
         $("#slider ul li h5").fitText(2.8);
         $("#slider ul li h1").css("line-height", "1em");
+        $("#slider ul li h5").css("margin", "0");
         
       }
       injectJson(); 
@@ -58,6 +60,7 @@ window.onload = function() {
       }
 //      changeTitle(post);
       
+       var newPos = 0;
       // Keyboard shortcuts
       $('body').bind('keydown', 'space', function(e){
         e.preventDefault();
@@ -67,8 +70,17 @@ window.onload = function() {
         $("#slider ul").css('-webkit-transition', '1000ms');
         console.log(newPos);
         });
+        
+        $('body').bind('keydown', 'return', function(e){
+          e.preventDefault();
+          console.log('space');
+          newPos = newPos + $(window).width();  
+          $("#slider ul").css('-webkit-transform', 'translate3d(-'+ newPos +'px, 0px, 0px)');
+          $("#slider ul").css('-webkit-transition', '1000ms');
+          console.log(newPos);
+          });
       
-      var newPos = 0;
+     
       $('body').bind('keydown', 'left', function(e){
         e.preventDefault();
         console.log('left');
